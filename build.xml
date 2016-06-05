@@ -41,7 +41,7 @@
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="mydashboard.classpath">
         <pathelement location="build/classes"/>
-        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+        <!-- <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/> --> 
         <path refid="Web App Libraries.libraryclasspath"/>
         <path refid="EAR Libraries.libraryclasspath"/>
     </path>
