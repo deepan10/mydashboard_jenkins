@@ -3,16 +3,12 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-<<<<<<< HEAD
               as the first entry and export the buildfile again. 
               
               <property name="ECLIPSE_HOME" value="/opt/eclipse/"/>
-=======
-              as the first entry and export the buildfile again. -->
 <project basedir="." default="build" name="mydashboard">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="/opt/eclipse/"/>
->>>>>>> 20a92bf96c4d6fecc03dfdc2c319661d7ead2e5b
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
@@ -39,23 +35,16 @@
                     <pathelement location="/opt/tomcat7/lib/ecj-4.4.2.jar"/>
                     <pathelement location="/opt/tomcat7/lib/websocket-api.jar"/>
     </path>
-<<<<<<< HEAD
               
               -->
 <project basedir="." default="build" name="mydashboard">
     <property environment="env"/>
 	<property file="build-${Environment.name}.properties" />    
-=======
->>>>>>> 20a92bf96c4d6fecc03dfdc2c319661d7ead2e5b
     <path id="Web App Libraries.libraryclasspath"/>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="mydashboard.classpath">
         <pathelement location="build/classes"/>
-<<<<<<< HEAD
         <!-- <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/> --> 
-=======
-        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
->>>>>>> 20a92bf96c4d6fecc03dfdc2c319661d7ead2e5b
         <path refid="Web App Libraries.libraryclasspath"/>
         <path refid="EAR Libraries.libraryclasspath"/>
     </path>
@@ -75,11 +64,8 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-<<<<<<< HEAD
         <javac debug="true" destdir="build/classes" includeantruntime="false" > <!-- debuglevel="${debuglevel}"   source="${source}" target="${target}"> -->
-=======
         <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
->>>>>>> 20a92bf96c4d6fecc03dfdc2c319661d7ead2e5b
             <src path="src"/>
             <classpath refid="mydashboard.classpath"/>
         </javac>
